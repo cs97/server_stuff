@@ -1,0 +1,5 @@
+#!/bin/bash
+apt -y install apt-transport-http ca-certificates curl software-properties-common
+curl -fsSL http://download.docker.com/linux/ubuntu/gpg | apt-key add
+add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+apt install docker-ce
