@@ -1,0 +1,9 @@
+#!/bin/bash
+tsdir="/data/teamspeak"
+
+if [ -d $tsdir ]; then
+  mkdir $tsdir
+fi
+
+docker run -e TS3SERVER_LICENS=view teamspeak
+docker run -d -p 9987:9987/udp -p 10011:10011 -p 30033:30033 -e TS3SERVER_LICENSE=accept -v /data/teamspeak:/var/ts3server teamspeak
