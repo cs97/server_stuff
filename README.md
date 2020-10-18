@@ -1,6 +1,6 @@
 # network_stuff
 
-### nfs-serveri-ubuntu
+### nfs-server-ubuntu
 ```
 $ sudo apt-get install nfs-kernel-server
 ```
